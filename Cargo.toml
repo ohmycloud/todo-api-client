@@ -1,0 +1,16 @@
+[package]
+name = "todo-api-client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.3", features = ["derive"] }
+colored_json = "4.1.0"
+http-body-util = "0.1.1"
+hyper = { version = "1.2.0", features = ["full"] }
+hyper-util = "0.1.3"
+reqwest = "0.12.1"
+serde = "1.0.197"
+serde_json = "1.0.114"
+tokio = { version = "1.36.0", features = ["macros", "rt-multi-thread", "io-util", "io-std"] }
+yansi = "1.0.1"
