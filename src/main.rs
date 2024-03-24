@@ -1,15 +1,13 @@
 use clap::{Parser, Subcommand};
 use colored_json::ToColoredJson;
 use http_body_util::Full;
-use http_body_util::{BodyExt, Empty};
-use hyper::body::{Body, Bytes};
+use http_body_util::BodyExt;
+use hyper::body::Bytes;
 use hyper::header::CONTENT_TYPE;
 use hyper::{Method, Request, Uri};
 use hyper_util::client::legacy::Client;
 use hyper_util::rt::TokioExecutor;
 use serde_json::json;
-use std::fmt::format;
-use std::time::Duration;
 use yansi::Paint;
 
 async fn request(
